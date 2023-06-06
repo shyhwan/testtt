@@ -9,9 +9,28 @@ const output = {
   },
 };
 
+const users = {
+  id: ["ysh", "rrs", "roof"],
+  pw: ["123", "1234", "12345"],
+};
+
 const process = {
   login: (req, res) => {
-    console.log(req.body);
+    const id = req.body.id,
+      pw = req.body.psword;
+
+    if (users.id.includes(id)) {
+      const idx = users.id.indexOf(id);
+      if (users.pw[idx] === pw) {
+        return res.json({
+          success: true,
+        });
+      } else {
+        return res.json({
+          success: false,
+        });
+      }
+    }
   },
 };
 
