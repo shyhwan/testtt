@@ -10,7 +10,6 @@ class User {
   login() {
     const body = this.body;
     const { id, pw } = UserStorage.getUserInfo(body.id);
-    console.log(pw);
     if (id) {
       if (id === body.id && pw === body.psword) {
         return { success: true };

@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home/login.css">
     <script src="/js/home/login.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-    <input id="id" type="text" placeholder="아이디"><br>
-    <input id="psword" type="text" placeholder="비밀번호"><br>
-    <button>로그인</button>
+    <div class="login">
+        <h1>Login</h1>
+        <form>
+            <input type="text" name="id" id="id" placeholder="ID" required="required" />
+            <input type="password" name="psword" id="psword" placeholder="Password" required="required" />
+            <button class="btn btn-primary btn-block btn-large">Let me in.</button>
+        </form>
+    </div>
 </body>
 
 </html>
+
+<!-- Copyright (c) 2023 by Tyler Fry (https://codepen.io/frytyler/pen/nJYVEO) -->
