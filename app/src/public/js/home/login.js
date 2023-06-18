@@ -2,11 +2,13 @@
 
 const id = document.querySelector("#id"),
   pw = document.querySelector("#psword"),
-  loginBtn = document.querySelector("button");
+  loginBtn = document.querySelector("#button");
 
 loginBtn.addEventListener("click", login);
 
 function login() {
+  if (!id.value) return alert("아이디를 입력해 주십시오.");
+
   const req = {
     id: id.value,
     psword: psword.value,
