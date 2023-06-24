@@ -14,7 +14,6 @@ dotenv.config();
 const home = require("./src/routes/home");
 
 const logger = require("./src/config/logger");
-logger.error("first Log");
 
 const accessLogStean = fs.createWriteStream(`${__dirname}/log/access.log`, {
   flags: "a",
